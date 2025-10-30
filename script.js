@@ -155,3 +155,4 @@ window.addEventListener('load', () => {
     log('Loaded saved game.');
   }
 });
+
