@@ -13,6 +13,7 @@ const initialState = {
   hintsUsed: 0
 };
 
+
 // --- Audio Setup ---
 const audioCtx = typeof AudioContext !== 'undefined' ? new AudioContext() : null;
 let soundOn = true;
