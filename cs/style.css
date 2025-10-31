@@ -1,3 +1,8 @@
+/* ==============================
+   Haunted House Game - Main Styles
+   ============================== */
+
+/* Theme Variables */
 :root {
   --bg: #0b0b12;
   --panel: #11121a;
@@ -6,6 +11,7 @@
   --glass: rgba(255, 255, 255, 0.04);
 }
 
+/* Base Layout */
 html, body {
   height: 100%;
   margin: 0;
@@ -14,7 +20,10 @@ html, body {
   color: #e8eef8;
 }
 
-/* Layout */
+/* ==============================
+   Game Layout
+   ============================== */
+
 .game-wrap {
   max-width: 1000px;
   margin: 24px auto;
@@ -27,10 +36,13 @@ html, body {
   gap: 18px;
 }
 
-/* Main screen / rooms */
+/* ==============================
+   Main Screen / Rooms
+   ============================== */
+
 .screen {
-  position: relative;
-  overflow: hidden;
+  position: relative;         /* ✅ Fix: ensures rooms stack */
+  overflow: hidden;           /* ✅ Prevents scrollbars from absolute rooms */
   border-radius: 10px;
   background: var(--panel);
   min-height: 560px;
@@ -47,7 +59,7 @@ html, body {
   align-items: center;
   justify-content: flex-start;
   padding-top: 24px;
-  transition: transform .6s cubic-bezier(.2, .9, .3, 1), opacity .5s ease;
+  transition: transform 0.6s cubic-bezier(.2, .9, .3, 1), opacity 0.5s ease;
 }
 
 .room.hidden {
@@ -56,11 +68,13 @@ html, body {
   pointer-events: none;
 }
 
+/* Room Title */
 .room h2 {
   margin: 0 0 8px;
   font-size: 22px;
 }
 
+/* Background view image */
 .view {
   width: 760px;
   height: 420px;
@@ -72,13 +86,16 @@ html, body {
   overflow: hidden;
 }
 
-/* Interactable hotspots */
+/* ==============================
+   Hotspots / Interactables
+   ============================== */
+
 .hotspot {
   position: absolute;
   border-radius: 8px;
   border: 2px dashed rgba(255, 255, 255, 0.03);
   cursor: pointer;
-  transition: transform .15s ease;
+  transition: transform 0.15s ease;
 }
 
 .hotspot:hover {
@@ -96,9 +113,13 @@ html, body {
   font-size: 12px;
   color: var(--muted);
   backdrop-filter: blur(6px);
+  display: none; /* Hidden until toggled by 'H' */
 }
 
-/* Sidebar */
+/* ==============================
+   Sidebar
+   ============================== */
+
 .sidebar {
   padding: 14px;
   border-radius: 8px;
@@ -126,6 +147,7 @@ html, body {
   border-color: var(--accent);
 }
 
+/* Inventory */
 .inventory {
   background: rgba(255, 255, 255, 0.02);
   padding: 12px;
@@ -139,7 +161,7 @@ html, body {
   flex-wrap: wrap;
 }
 
-.inv-slot {
+.inv-slot, .inv-item {
   width: 58px;
   height: 58px;
   border-radius: 8px;
@@ -152,6 +174,7 @@ html, body {
   color: var(--muted);
 }
 
+/* Log */
 .log {
   margin-top: 12px;
   background: rgba(0, 0, 0, 0.18);
@@ -162,7 +185,10 @@ html, body {
   font-size: 13px;
 }
 
-/* Modal / popup */
+/* ==============================
+   Modal / Popup
+   ============================== */
+
 .modal {
   position: absolute;
   inset: 0;
@@ -170,17 +196,31 @@ html, body {
   align-items: center;
   justify-content: center;
   background: linear-gradient(180deg, rgba(2, 4, 12, 0.6), rgba(2, 4, 12, 0.8));
+  z-index: 10;
 }
 
-.card {
-  background: linear-gradient(180deg, #0f1322, #0b0d16);
-  padding: 18px;
-  border-radius: 10px;
-  width: 460px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+.modal p {
+  margin-bottom: 12px;
+  font-size: 16px;
 }
 
-/* Footer */
+.modal button {
+  padding: 6px 12px;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modal button:hover {
+  background: var(--accent);
+}
+
+/* ==============================
+   Footer
+   ============================== */
+
 footer {
   margin-top: 12px;
   text-align: center;
@@ -188,7 +228,10 @@ footer {
   font-size: 13px;
 }
 
-/* Responsive */
+/* ==============================
+   Responsive
+   ============================== */
+
 @media (max-width: 980px) {
   .game-wrap {
     grid-template-columns: 1fr;
