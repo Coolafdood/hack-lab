@@ -13,6 +13,7 @@ const initialState = {
   hintsUsed: 0
 };
 
+
 // --- Audio Setup ---
 const audioCtx = typeof AudioContext !== 'undefined' ? new AudioContext() : null;
 let soundOn = true;
@@ -261,7 +262,7 @@ function showPuzzleModal() {
       <div class="card">
         <h3>Locked Chest</h3>
         <p>Enter the 4-letter code:</p>
-        <input id="puzzle-input" maxlength="6"
+        <input id="puzzle-input" maxlength="4"
           style="width:100%;padding:8px;border-radius:6px;
           border:1px solid rgba(255,255,255,0.06);
           background:transparent;color:inherit" />
