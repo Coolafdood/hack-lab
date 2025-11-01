@@ -3,14 +3,234 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Haunted House</title>
-  <link rel="stylesheet" href="landing.css" />
+  <title>MindTrap Landing Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+    }
+
+    /* Background */
+    .landing {
+      background: url('assets/landing.png') no-repeat center center/cover;
+      height: 100vh;
+      width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Logo */
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      width: 160px;
+      height: auto;
+    }
+
+    /* Hamburger Menu */
+    .hamburger {
+      position: absolute;
+      top: 25px;
+      right: 35px;
+      width: 35px;
+      height: 25px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hamburger span {
+      display: block;
+      height: 4px;
+      background: white;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    /* Center Button */
+    .enter-btn {
+      padding: 16px 40px;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: white;
+      background-color: rgba(0,0,0,0.6);
+      border: 2px solid white;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .enter-btn:hover {
+      background-color: white;
+      color: black;
+    }
+
+    /* Sound Toggle */
+    .sound-toggle {
+      position: absolute;
+      bottom: 25px;
+      right: 30px;
+      background-color: rgba(0,0,0,0.6);
+      border: 2px solid white;
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      cursor: pointer;
+      font-size: 1.4rem;
+      transition: 0.3s;
+    }
+
+    .sound-toggle:hover {
+      background-color: white;
+      color: black;
+    }
+
+    /* Modal */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 0.3s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .modal-content {
+      background-color: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      animation: slideUp 0.4s ease;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .modal-content h2 {
+      margin-bottom: 15px;
+    }
+
+    .close-btn {
+      background: black;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .close-btn:hover {
+      background: #333;
+    }
+  </style>
 </head>
-<body class="landing-page">
-  <div class="landing-container">
-    <h1>Welcome to the Haunted House</h1>
-    <p>Dare to enter... if you’re brave enough to uncover the secrets within.</p>
-    <a href="haunted-house-game.html" class="landing-button">Enter the House</a>
+<body>
+
+  <div class="landing">
+    <!-- Logo -->
+    <img src="assets/MindTrapLogo2.png" alt="MindTrap Logo" class="logo">
+
+    <!-- Hamburger Menu -->
+    <div class="hamburger" id="menuBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Enter Button -->
+    <button class="enter-btn" id="enterBtn">Enter</button>
+
+    <!-- Sound Toggle -->
+    <div class="sound-toggle" id="soundBtn">🔊</div>
   </div>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h2>How to Play</h2>
+      <p>
+        Welcome to <strong>MindTrap</strong>! Test your logic and puzzle-solving skills.<br><br>
+        🧩 Read the clues carefully.<br>
+        🧠 Think outside the box.<br>
+        🕒 Race against time.<br><br>
+        Are you ready to challenge your mind?
+      </p>
+      <button class="close-btn" id="closeModal">Close</button>
+    </div>
+  </div>
+
+  <!-- Audio -->
+  <audio id="bgAudio" loop>
+    <source src="assets/sounds/creepy.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const modal = document.getElementById('modal');
+    const closeModal = document.getElementById('closeModal');
+    const soundBtn = document.getElementById('soundBtn');
+    const bgAudio = document.getElementById('bgAudio');
+    const enterBtn = document.getElementById('enterBtn');
+    let soundOn = false;
+
+    // Open modal
+    menuBtn.addEventListener('click', () => {
+      modal.style.display = 'flex';
+    });
+
+    // Close modal
+    closeModal.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
+    // Sound toggle
+    soundBtn.addEventListener('click', () => {
+      soundOn = !soundOn;
+      if (soundOn) {
+        bgAudio.play();
+        soundBtn.textContent = '🔊';
+      } else {
+        bgAudio.pause();
+        soundBtn.textContent = '🔇';
+      }
+    });
+
+    // Enter Button (example redirect)
+    enterBtn.addEventListener('click', () => {
+      alert('Entering the game...');
+      // window.location.href = 'game.html'; // enable if you have next page
+    });
+  </script>
 </body>
 </html>
