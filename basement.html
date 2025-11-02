@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MindTrap - Basement</title>
+  <link rel="stylesheet" href="css/basement.css" />
+</head>
+<body>
+  <div class="scene">
+    <!-- Background image -->
+    <img src="assets/images/basement.png" alt="Basement" class="bg" />
+
+    <!-- 🔦 Flickering light overlay -->
+    <div class="flicker"></div>
+
+    <!-- Navigation arrows -->
+    <img src="assets/images/arrow.png" alt="Right Arrow" class="arrow right" id="rightArrow" />
+    <img src="assets/images/arrow.png" alt="Left Arrow" class="arrow left" id="leftArrow" />
+    <img src="assets/images/arrow.png" alt="Bottom Arrow" class="arrow bottom" id="bottomArrow" />
+
+    <!-- Clickable area for clue -->
+    <div class="click-zone" id="clueZone"></div>
+
+    <!-- Dialog box -->
+    <div id="dialogBox" class="dialog hidden">
+      <p>Unlock with the clue</p>
+    </div>
+  </div>
+
+  <script src="js/basement.js"></script>
+</body>
+</html>
+
