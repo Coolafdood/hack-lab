@@ -13,8 +13,8 @@ Solve riddles, collect clues, and find your way out—before the house finds you
 ## 🖼️ Screenshots
 
 | Landing Page | Foyer | Living Room | Basement |
-
-| ![Foyer](assets/images/foyer.png) | ![Living Room](assets/images/livingroom.png) | ![Basement](assets/images/basement.png) |
+|:--|:--|:--|:--|
+| ![Landing Page](assets/images/landing.png) | ![Foyer](assets/images/foyer.png) | ![Living Room](assets/images/livingroom.png) | ![Basement](assets/images/basement.png) |
 
 ---
 
