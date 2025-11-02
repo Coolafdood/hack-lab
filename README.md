@@ -106,11 +106,11 @@ for the **Halloween Hackathon 2025** 🎃
 
 | Role | Name | GitHub / Handle | Key Contributions |
 |:--|:--|:--|:--|
-| 🧙‍♀️ **Project Lead / Developer** | *[Mubashir]* | [@mubashir](https://github.com/yourhandle) | Game engine architecture, logic flow, inventory system |
-| 🎨 **UI / UX Designer** | *[Syeda Fatima]* | [@fatima](https://github.com/teammate1) | Room artwork, layout design, accessibility styling |
-| 💻 **Backend Engineer** | *[Chaz]* | [@chaz](https://github.com/teammate2) | Web Audio integration, ambient system, optimization |
-| 🧠 **API Integration Specialist** | *[Inekwe]* | [@inekwe](https://github.com/teammate3) | Storyline, riddles, progressive quest logic |
-| 🧪 **QA & Testing** | *[Raja]* | [@raja](https://github.com/teammate4) | Testing, debugging, and final deployment setup |
+| 🧙‍♀️ **Project Lead / Developer** | *[Mubashir]* | [@mubashir](https://github.com/Mubashirgit1) | Game engine architecture, logic flow, inventory system |
+| 🎨 **UI / UX Designer** | *[Syeda Fatima]* | [@fatima](https://github.com/FatimasCoding2020) | Room artwork, layout design, accessibility styling |
+| 💻 **Backend Engineer** | *[Chaz]* | [@chaz](https://github.com/Coolafdood) | Web Audio integration, ambient system, optimization |
+| 🧠 **API Integration Specialist** | *[Inekwe]* | [@inekwe](https://github.com/Goziechukwu) | Storyline, riddles, progressive quest logic |
+| 🧪 **QA & Testing** | *[Raja]* | [@raja](https://github.com/picker770) | Testing, debugging, and final deployment setup |
 
 ---
 
