@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  overflow: hidden;
+}
+
+.scene {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Opaque navigation arrows */
+.arrow {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.3s, filter 0.3s;
+}
+
+/* Subtle glowing effect on hover */
+.arrow:hover {
+  opacity: 0.9;
+  filter: drop-shadow(0 0 10px rgba(255, 165, 0, 0.7))
+          drop-shadow(0 0 20px rgba(255, 140, 0, 0.5));
+}
+
+/* Positioning */
+.up {
+  top: 30px;
+  right: 40px;
+  transform: rotate(270deg); /* Point upward */
+}
+
+.down {
+  bottom: 30px;
+  right: 40px;
+  transform: rotate(90deg); /* Point downward */
+}
+
+/* Clickable area for showing dialog */
+.click-zone {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 120px;
+  cursor: pointer;
+}
+
+/* Dialog styling */
+.dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 1.5rem;
+  padding: 20px 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Simple fade-in for the dialog */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -55%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}

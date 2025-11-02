@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: black;
+}
+
+.scene {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 🔽 Navigation Arrows (opaque, visible) */
+.arrow {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.3s, filter 0.3s;
+}
+
+/* Glowing orange hover */
+.arrow:hover {
+  opacity: 0.9;
+  filter: drop-shadow(0 0 10px rgba(255, 165, 0, 0.7))
+          drop-shadow(0 0 20px rgba(255, 140, 0, 0.5));
+}
+
+
+/* Positions + rotations */
+.left {
+  left: 2%;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.right {
+  right: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.down {
+  bottom: 4%;
+  left: 50%;
+  transform: translateX(-50%) rotate(90deg);
+}
+
+.hotspot {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 15;
+}
+
+
+
+.shelf {
+  bottom: 28%;
+  left: 9%;
+  width: 18%;
+  height: 22%;
+}
+
+
+.painting {
+  top: 20%;
+  left: 42%;
+  width: 18%;
+  height: 35%;
+}
+
+/* 💀 Dialog overlay */
+.dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.dialog.show {
+  opacity: 1;
+}
+
+.dialog-content {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(255, 180, 0, 0.2);
+  animation: glowFade 1.5s ease forwards;
+}
+
+.dialog-content img {
+  width: 400px;
+  max-width: 90vw;
+  opacity: 0.95;
+  border-radius: 10px;
+  animation: imageReveal 1.5s ease forwards;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ✨ Glow + fade animations */
+@keyframes glowFade {
+  0% {
+    box-shadow: 0 0 0 rgba(255, 180, 0, 0);
+    transform: scale(0.9);
+  }
+  100% {
+    box-shadow: 0 0 40px rgba(255, 180, 0, 0.4);
+    transform: scale(1);
+  }
+}
+
+@keyframes imageReveal {
+  0% {
+    opacity: 0;
+    filter: brightness(0.4) blur(3px);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(1) blur(0);
+  }
+}
