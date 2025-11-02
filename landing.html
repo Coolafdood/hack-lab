@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MindTrap - Escape the Haunted Mansion</title>
+  <link rel="stylesheet" href="css/landing.css" />
+</head>
+<body>
+  <div class="scene">
+    <!-- Background -->
+    <img src="assets/images/landing.png" alt="Landing" class="bg" />
+
+    <!-- Logo -->
+    <img src="assets/images/MindTrapLogo2.png" alt="MindTrap Logo" class="logo" />
+
+    <!-- Enter button -->
+    <button id="enterBtn" class="enter-btn">Enter</button>
+
+    <!-- Hamburger button -->
+    <div id="hamburger" class="hamburger">
+      ☰
+    </div>
+
+    <!-- Sound toggle -->
+    <div class="sound-control">
+      <label class="switch">
+        <input type="checkbox" id="soundToggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <!-- Dialog -->
+    <div id="dialogBox" class="dialog hidden">
+      <p>The mansion hides its secrets well. Will you uncover the code and break free?</p>
+    </div>
+  </div>
+
+  <audio id="bgMusic" loop>
+    <source src="assets/sounds/creepy.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="js/landing.js"></script>
+</body>
+</html>
