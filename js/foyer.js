@@ -1,8 +1,15 @@
 // Navigation arrows
+// Navigation logic
 document.querySelectorAll('.arrow').forEach(arrow => {
   arrow.addEventListener('click', () => {
     const target = arrow.dataset.target;
-    window.location.href = `${target}.html`;
+
+    // If the right arrow is clicked AND player has found the key → go to escape page
+    if (target === 'basement' && localStorage.getItem('hasKey') === 'true') {
+      window.location.href = 'escape.html';
+    } else {
+      window.location.href = `${target}.html`;
+    }
   });
 });
 
@@ -34,12 +41,12 @@ dialog.addEventListener('click', closeDialog);
 // Click hotspots
 shelf.addEventListener('click', e => {
   e.stopPropagation();
-  openDialog('assets/images/shelf.png');
+  openDialog('assets/images/keyfound.png');
+  // ✅ Mark key as found
+  localStorage.setItem('hasKey', 'true');
 });
 
 painting.addEventListener('click', e => {
   e.stopPropagation();
-  openDialog('assets/images/painting.png');
+  openDialog('assets/images/paintingcode.png');
 });
-
-

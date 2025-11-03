@@ -1,0 +1,85 @@
+/* Reset + Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: black;
+}
+
+.scene {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: fadeInBg 2s ease forwards;
+}
+
+/* ✨ Soft glowing dialog */
+.dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  z-index: 10;
+  opacity: 1;
+}
+
+.dialog-content {
+  background: transparent;
+  padding: 25px 60px;
+  border-radius: 15px;
+  font-size: 2rem;
+  color: #ffae42;
+  text-shadow: 0 0 15px rgba(255, 165, 0, 0.9), 0 0 30px rgba(255, 140, 0, 0.6);
+  box-shadow: 0 0 40px rgba(255, 165, 0, 0.4),
+              0 0 70px rgba(255, 140, 0, 0.3);
+  animation: orangePulse 2s ease-in-out infinite alternate,
+             fadeIn 1.5s ease forwards;
+}
+
+/* ✨ Glow animation */
+@keyframes orangePulse {
+  0% {
+    box-shadow: 0 0 20px rgba(255, 150, 0, 0.3),
+                0 0 40px rgba(255, 120, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 35px rgba(255, 160, 0, 0.5),
+                0 0 70px rgba(255, 120, 0, 0.4);
+  }
+}
+
+/* 🕯️ Fade-in animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+    filter: blur(3px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes fadeInBg {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

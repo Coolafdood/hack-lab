@@ -8,24 +8,23 @@
 </head>
 <body>
   <div class="scene">
-    <!-- Background image -->
+    <!-- Background -->
     <img src="assets/images/livingroom.png" alt="Living Room" class="bg" />
 
-    
     <!-- Navigation arrows -->
     <img src="assets/images/arrow.png" alt="Up Arrow" class="arrow up" id="upArrow" />
     <img src="assets/images/arrow.png" alt="Down Arrow" class="arrow down" id="downArrow" />
 
-    <!-- Click zone for chest/code -->
+    <!-- Clickable area for chest -->
     <div class="click-zone" id="codeZone"></div>
 
-    <!-- Dialog box -->
-    <div id="dialogBox" class="dialog hidden">
-      <p>Unlock with the code</p>
+    <!-- Opaque dialog box to display clue image -->
+    <div id="imageDialog" class="dialog hidden">
+      <img src="assets/images/clue.png" alt="Clue" class="dialog-image" />
     </div>
   </div>
-
 
   <script src="js/livingroom.js"></script>
 </body>
 </html>
+

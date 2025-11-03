@@ -2,20 +2,21 @@
 const upArrow = document.getElementById("upArrow");
 const downArrow = document.getElementById("downArrow");
 
-// Dialog
-const dialogBox = document.getElementById("dialogBox");
+// Elements
 const codeZone = document.getElementById("codeZone");
+const imageDialog = document.getElementById("imageDialog");
 
-// Navigate between rooms
+// Navigation
 upArrow.onclick = () => (window.location.href = "foyer.html");
 downArrow.onclick = () => (window.location.href = "basement.html");
 
-// Click zone shows dialog
+// Click chest area → show clue image
 codeZone.onclick = () => {
-  dialogBox.classList.remove("hidden");
+  imageDialog.classList.remove("hidden");
 };
 
-// Clicking the dialog closes it
-dialogBox.onclick = () => {
-  dialogBox.classList.add("hidden");
+// Click anywhere on dialog to close it
+imageDialog.onclick = () => {
+  imageDialog.classList.add("hidden");
 };
+
