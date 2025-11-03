@@ -10,6 +10,11 @@
 
 ---
 
+![MindTrap responsive displays](assets/images/responsive.png)
+
+---
+
+
 ## 🖼️ Screenshots
 
 | Landing Page | Foyer | Living Room | Basement |
