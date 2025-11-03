@@ -84,27 +84,27 @@ _if you dare._
 GitHub Pages
 
 This project was deployed using GitHub Pages from the main branch.
-Navigate to the repository on GitHub.
-Click on the Settings tab.
-Scroll down to the Pages section (under Code and Automation).
-Under Source, select the Main branch and the /(root) folder.
-Click Save.
-After a few moments, the site will be published and the live link will appear at the top of the Pages section.
+- Navigate to the repository on GitHub.
+- Click on the Settings tab.
+- Scroll down to the Pages section (under Code and Automation).
+- Under Source, select the Main branch and the /(root) folder.
+- Click Save.
+- After a few moments, the site will be published and the live link will appear at the top of the Pages section.
 🔗 Live Site: https://coolafdood.github.io/hack-lab/ or https://fatimascoding2020.github.io/MindTrap/
 
 Forking the Repository
 
 To create a personal copy of this project:
-Go to the MindTrap Repository
-Click the Fork button in the top-right corner.
-This will create a copy of the repo in your own GitHub account for personal use or modification.
+- Go to the MindTrap Repository
+- Click the Fork button in the top-right corner.
+- This will create a copy of the repo in your own GitHub account for personal use or modification.
 
 Cloning the Repository
 
 To clone this project locally:
-On the repository page, click the Code button.
-Copy the HTTPS or SSH link.
-Open your IDE terminal and run:
+- On the repository page, click the Code button.
+- Copy the HTTPS or SSH link.
+- Open your IDE terminal and run:
 git clone https://github.com/Coolafdood/hack-lab.git
 
 Press Enter, and the repository will be cloned to your local machine.
@@ -112,9 +112,9 @@ Press Enter, and the repository will be cloned to your local machine.
 Local Deployment
 
 To run the game locally:
-Open the cloned project folder in your IDE.
-Ensure all assets (HTML, CSS, JS, images, and audio files) are in their correct paths.
-Open the index.html file in your browser.
+- Open the cloned project folder in your IDE.
+- Ensure all assets (HTML, CSS, JS, images, and audio files) are in their correct paths.
+- Open the index.html file in your browser.
 
 Enjoy the full interactive experience.
 
@@ -123,8 +123,11 @@ Enjoy the full interactive experience.
 ## 🏆 Hackathon Info
 
 **Event:** Halloween Hackathon 2025  
+
 **Participants:** Fatima, Inekwe, Chaz & Mubashir
-**Category:** Game Design & Web Interactivity  
+
+**Category:** Game Design & Web Interactivity 
+ 
 **Result:** _Successfully deployed playable web app + PWA version_
 
 ---
