@@ -19,13 +19,3 @@ codeZone.onclick = () => {
 dialogBox.onclick = () => {
   dialogBox.classList.add("hidden");
 };
-
-// 🎵 Auto-play radio sound when entering the living room
-const radioSound = document.getElementById("radioSound");
-
-// Some browsers block autoplay until interaction
-document.addEventListener("click", () => {
-  if (radioSound.paused) {
-    radioSound.play().catch(() => {});
-  }
-});
