@@ -1,6 +1,8 @@
+<p align="center">
+  <img src="assets/images/MindTrapLogo2.png" alt="MindTrap Logo" width="300">
+</p>
 
-
-# 🕯️ MindTrap: Escape the Haunted Mansion
+#  MindTrap: Escape the Haunted Mansion
 
 > _“Sometimes, the door you fear to open… is the one that sets you free.”_
 
