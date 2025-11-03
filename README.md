@@ -90,7 +90,7 @@ Scroll down to the Pages section (under Code and Automation).
 Under Source, select the Main branch and the /(root) folder.
 Click Save.
 After a few moments, the site will be published and the live link will appear at the top of the Pages section.
-🔗 Live Site: 
+🔗 Live Site: https://coolafdood.github.io/hack-lab/ or https://fatimascoding2020.github.io/MindTrap/
 
 Forking the Repository
 
@@ -105,7 +105,7 @@ To clone this project locally:
 On the repository page, click the Code button.
 Copy the HTTPS or SSH link.
 Open your IDE terminal and run:
-git clone 
+git clone https://github.com/Coolafdood/hack-lab.git
 
 Press Enter, and the repository will be cloned to your local machine.
 
